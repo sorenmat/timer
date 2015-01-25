@@ -16,10 +16,10 @@ func TimerStart() {
 // A call to TimeSpent can be called to retrieve this value later.
 func TimerStop() int64 {
 	lastRun = time.Now().UnixNano()
-	return lastRun
+	return lastRun - start
 }
 
 // TimeSpent returns the difference between the call to TimerStart and TimerStop in Nano seconds
 func TimeSpent() int64 {
-	return lastRun
+	return lastRun - start
 }
