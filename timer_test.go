@@ -6,18 +6,18 @@ import (
 )
 
 func TestTimer(t *testing.T) {
-	TimerStart()
+	Start()
 	time.Sleep(50 * time.Millisecond)
-	timeSpent := TimerStop()
+	timeSpent := Stop()
 	if timeSpent <= 50 {
 		t.Error()
 	}
 
 }
 func TestTimerWithTimeSpent(t *testing.T) {
-	TimerStart()
+	Start()
 	time.Sleep(50 * time.Millisecond)
-	TimerStop()
+	Stop()
 	if TimeSpent() <= 50 {
 		t.Error()
 	}
